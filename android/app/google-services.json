@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "37014072541",
+    "project_id": "bharatmata-1640859565499",
+    "storage_bucket": "bharatmata-1640859565499.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37014072541:android:6eb2768e245795aa437f34",
+        "android_client_info": {
+          "package_name": "com.bs.bharatmata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "37014072541-3e0kag8dn19mncp7ekn2vnonv8oabs98.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5tFxfuuo6ycMLUJJfF54bPeL_o9qPUPA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "37014072541-3e0kag8dn19mncp7ekn2vnonv8oabs98.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

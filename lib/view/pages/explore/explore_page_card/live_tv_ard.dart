@@ -1,0 +1,62 @@
+import 'package:flutter/material.dart';
+
+import 'package:flutter_responsive_screen/flutter_responsive_screen.dart';
+import 'package:get/get.dart';
+
+import '../../../constant/app_colors.dart';
+import '../../../icons/explore_icons_icons.dart';
+import '../../tv_channel_pages/tv_channel_list_page.dart';
+
+class LiveTvCard extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final Function wp = Screen(MediaQuery.of(context).size).wp;
+    return GestureDetector(
+      onTap: () {
+        Get.to(() => TvChannelListPage());
+      },
+      child: Container(
+        height: 150,
+        width: wp(100),
+        decoration: BoxDecoration(
+          color: Colors.black,
+          borderRadius: BorderRadius.circular(10.0),
+          image: DecorationImage(
+            image: AssetImage("assets/images/explore_page/live_tv.png"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.0),
+            color: Color(0xffE15050).withOpacity(0.8),
+          ),
+          child: Center(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  ExploreIcons.live_channel,
+                  size: 40.0,
+                  color: Colors.white,
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  "LIVE PRAVACHAN",
+                  style: TextStyle(
+                    color: AppColors.white,
+                    fontSize: 15.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

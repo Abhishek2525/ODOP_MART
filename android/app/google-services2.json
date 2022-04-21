@@ -1,0 +1,167 @@
+{
+  "project_info": {
+    "project_number": "889266935782",
+    "firebase_url": "https://bangla-bong.firebaseio.com",
+    "project_id": "bangla-bong",
+    "storage_bucket": "bangla-bong.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889266935782:android:16473b7c09d8aaeb426827",
+        "android_client_info": {
+          "package_name": "com.iotait.iotaflix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "889266935782-kv6n3nluk6gqn9lf0r4ni0lne49ip5q8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlCgLYLU75mLGVlKWGfglgP2XmxmxD00I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "889266935782-0ddi6rtc4qe9gsl7ulj03f6ofsjpfujk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "889266935782-31vck50ss10fkd69mmchfuhtp2apa7ro.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.goubba.com.com2"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889266935782:android:70c6fe900389979a426827",
+        "android_client_info": {
+          "package_name": "com.bs.bharatmata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "889266935782-ckmvql65600959a7fh6aqaepcmauk6s0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bs.bharatmata",
+            "certificate_hash": "9aecf6d7e9cbf240623dec97caad5550e80ece81"
+          }
+        },
+        {
+          "client_id": "889266935782-kv6n3nluk6gqn9lf0r4ni0lne49ip5q8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlCgLYLU75mLGVlKWGfglgP2XmxmxD00I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "889266935782-0ddi6rtc4qe9gsl7ulj03f6ofsjpfujk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "889266935782-31vck50ss10fkd69mmchfuhtp2apa7ro.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.goubba.com.com2"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889266935782:android:bfb69363b3b7363d426827",
+        "android_client_info": {
+          "package_name": "com.iotait.videoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "889266935782-0jd7ur9askcit6akv6ih5afpof74an2h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iotait.videoapp",
+            "certificate_hash": "07a4d3e35b31423e0f5402ed1101db5e2f3efb28"
+          }
+        },
+        {
+          "client_id": "889266935782-46ma1jasgqlmcod5n2uldr5j4u2pn37u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iotait.videoapp",
+            "certificate_hash": "b3ce8388eabe126cb232c4d3403183006fcb3b15"
+          }
+        },
+        {
+          "client_id": "889266935782-efhmc2hg2v72tisn8lifu6ocbde65jco.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iotait.videoapp",
+            "certificate_hash": "861802e8887e4240c7e9d5c27421d31c43662227"
+          }
+        },
+        {
+          "client_id": "889266935782-n3thncdsj1753f981aj1cchacg5o3vr4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iotait.videoapp",
+            "certificate_hash": "a7a10d91b842cafc16b7782a30857415c7ac38fc"
+          }
+        },
+        {
+          "client_id": "889266935782-srf7lqhp26a4oe7s9jpvqhla3o1tt3di.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iotait.videoapp",
+            "certificate_hash": "868a02cede05d938ed8cd64c18193fcc02c3ff7f"
+          }
+        },
+        {
+          "client_id": "889266935782-kv6n3nluk6gqn9lf0r4ni0lne49ip5q8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlCgLYLU75mLGVlKWGfglgP2XmxmxD00I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "889266935782-0ddi6rtc4qe9gsl7ulj03f6ofsjpfujk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "889266935782-31vck50ss10fkd69mmchfuhtp2apa7ro.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.goubba.com.com2"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

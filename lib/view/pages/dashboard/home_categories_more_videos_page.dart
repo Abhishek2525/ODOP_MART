@@ -1,0 +1,182 @@
+import 'package:flutter/material.dart';
+
+import 'package:extended_image/extended_image.dart';
+import 'package:flutter_responsive_screen/flutter_responsive_screen.dart';
+import 'package:get/get.dart';
+import 'package:iotflixcinema/core/view_models/VideoDetailsViewModel.dart';
+
+import '../../../core/api/app_urls.dart';
+import '../../../core/models/home_categories_model.dart';
+import '../../constant/app_colors.dart';
+import '../../router/app_router.dart';
+import '../action_category/action_category_img_card.dart';
+import '../action_category/action_category_sponsored_card.dart';
+
+class HomeCategoryMoreVideosPage extends StatefulWidget {
+  final String catName;
+  final int nestedId;
+  final String catImage;
+  final List<HomeData> listModel;
+
+  HomeCategoryMoreVideosPage(
+      {this.nestedId, this.catName, this.catImage, this.listModel});
+
+  @override
+  _HomeCategoryMoreVideosPageState createState() =>
+      _HomeCategoryMoreVideosPageState();
+}
+
+class _HomeCategoryMoreVideosPageState
+    extends State<HomeCategoryMoreVideosPage> {
+
+  @override
+  void initState() {
+
+    widget.listModel.removeWhere((element) => element == null);
+
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final Function hp = Screen(MediaQuery.of(context).size).hp;
+    return WillPopScope(
+      onWillPop: () async {
+        Navigator.of(context).pop();
+
+        return true;
+      },
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: Container(
+            child: Column(
+              children: [
+                Stack(
+                  children: [
+                    Container(
+                      height: hp(30),
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                            colorFilter: ColorFilter.mode(
+                                Colors.black.withOpacity(0.7),
+                                BlendMode.srcOver),
+                            image: ExtendedNetworkImageProvider(
+                              widget?.catImage ?? "https://picsum.photos/200",
+                              cache: true,
+                              cacheRawData: true,
+                              imageCacheName: widget?.catImage ??
+                                  "https://picsum.photos/200",
+                            ),
+                            fit: BoxFit.cover,
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                                spreadRadius: 1,
+                                blurRadius: 1,
+                                offset: Offset(0, 2),
+                                color: Colors.black38)
+                          ]),
+                      child: Center(
+                        child: Text(
+                          widget?.catName ?? "Category name",
+                          style: TextStyle(
+                              color: AppColors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 26),
+                        ),
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        AppRouter.back(nestedId: widget?.nestedId);
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 20, top: 40),
+                        child: ImageIcon(
+                          AssetImage('images/backIcon.png'),
+                          size: 20,
+                          color: AppColors.white,
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: GestureDetector(
+                        onTap: () {
+                          AppRouter.navToExploreSearchPage();
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 20, top: 42),
+                          child: ImageIcon(
+                            AssetImage('images/searchIcon.png'),
+                            size: 18,
+                            color: AppColors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 0),
+                        child: GridView.builder(
+                          padding: EdgeInsets.zero,
+                          shrinkWrap: true,
+                          physics: NeverScrollableScrollPhysics(),
+                          gridDelegate:
+                              SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: 3,
+                                  childAspectRatio: 4 / 5,
+                                  mainAxisSpacing: 10),
+                          itemCount: widget?.listModel?.length ?? 0,
+                          itemBuilder: (BuildContext context, int index) =>
+                              ActionCategoryImgCard(
+                            imgPath: widget?.listModel[index]?.thumbnail != null
+                                ? AppUrls.imageBaseUrl +
+                                    widget?.listModel[index]?.thumbnail
+                                : "https://picsum.photos/60",
+                            onTap: () {
+
+                              try{
+                                VideoDetailsViewModel vm = Get.find();
+                                vm.refreshData(widget.listModel[index]);
+                              }catch(err){
+
+                              }
+
+                              AppRouter.navToVideoDetailsPage(
+                                  widget?.listModel[index],
+                                  widget.nestedId,
+                                  widget?.listModel[index].categoryId);
+                            },
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 4),
+                  child: ActionCategorySponsoredCard(),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
